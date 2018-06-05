@@ -12,7 +12,7 @@ class App extends Component {
         <img src={logo} className="App-logo" alt="logo" />
         <ButtonBar content="aaa" variant="bbbb" />
         <GoogleButton />
-
+        <GoogleButton />
         <YoutubeFrame />
 
         {/* <LoggingButton content="aaa" variant="bbbb" c="c" d="d"/>
