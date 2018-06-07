@@ -21,13 +21,22 @@
 .App-intro {
   font-size: large;
 }
+.demo-layout-transparent {
+  /* background: url('../assets/demos/transparent.jpg') center / cover; */
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  /* background: rgb(41,47,51); */
+  height: 100vh; */
+  background: rgb(41,47,51);
 }
 button {
   margin: 30px;

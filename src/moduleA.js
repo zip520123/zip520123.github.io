@@ -15,7 +15,7 @@ class TButton extends React.Component {
 }
 class ButtonBar extends React.Component {
     constructor(props) {
-      super(props);
+      super(props)
       this.state = {clickText: "No one click"}
       this.handle1Click = this.handle1Click.bind(this)
     }
@@ -33,6 +33,7 @@ class ButtonBar extends React.Component {
                 <ButtonToolbar>
                    {buttonList}
   <p>{clickText} click</p>
+  
  </ButtonToolbar>
       )
     }

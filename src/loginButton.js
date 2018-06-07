@@ -17,7 +17,6 @@ class LoggingButton extends React.Component {
         </button>
       );
     }
-    
   }
 class LoadingButton extends React.Component {
 constructor(props, context) {
@@ -77,10 +76,17 @@ class GoogleButton extends React.Component {
     const buttonColorRed = "mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised";
     const fab = 'mdl-button--fab';
     const colored = `${buttonColorRed} mdl-button--colored`;
+    const icon = "material-icons mdl-badge mdl-badge--overlap ";
+    const badge = `♥`;
+
     return (
+      <div>
     <button class={isClick ? buttonColorRed : colored} onClick={this.handleClick}>
     {isClick ? 'click' : 'isNotClick'}
-    </button>);
+    </button>
+    <div class={icon} data-badge={isClick ? badge : null}>account_box</div>  
+    </div>
+  );
   }
 }
 // export default LoggingButton;
