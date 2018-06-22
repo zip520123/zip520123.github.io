@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -21,14 +21,101 @@
 .App-intro {
   font-size: large;
 }
-.demo-layout-transparent {
-  /* background: url('../assets/demos/transparent.jpg') center / cover; */
+img.article-image {
+  width: 100%;
+  height: auto;
 }
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
+.portfolio-card .mdl-card__title {
+  padding-bottom: 0;
+}
+.portfolio-logo-row {
+  min-height: 200px;
+}
+
+.is-compact .portfolio-logo-row {
+  min-height: auto;
+}
+
+.portfolio-logo {
+  
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  margin: auto auto 10px;
+}
+
+.is-compact .portfolio-logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+}
+.portfolio-header .mdl-layout__header-row {
+  padding: 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mdl-layout__header {
+  color : #737373;
+  background-color: rgba(197, 197, 197, 0.44);
+}
+.mdl-layout__header .mdl-layout__drawer-button {
+  color : #737373;
+  /* background-color: rgba(197, 197, 197, 0.44); */
+}
+.mdl-layout__title {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+}
+.is-compact .mdl-layout__title span {
+  display: none;
+}
+/* Fixes for IE 10 */
+.mdl-grid {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.mdl-mini-footer {
+  margin-top: 80px;
+  
+  height: 120px;
+  padding: 40px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; 
+  background-color: white;
+  box-sizing: border-box;
+}
+.social-btn {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.46;
+  border-radius: 2px;
+}
+.social-btn__twitter {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
+}
+.social-btn__blogger {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
+}
+.social-btn__gplus {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
+}
+.portfolio-max-width {
+  max-width: 900px;
+  margin: auto;
+}
+.nounderline {
+  text-decoration: none !important
 }
 body {
   /* display: flex;
@@ -36,9 +123,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; */
-  background: rgb(41,47,51);
+  /* margin: 0;
+  padding: 0; */
+  font-family: sans-serif;
+  background: #292f33;
 }
-button {
+
+/* button {
   margin: 30px;
   font-size: 18px;
   height: 65px;
@@ -48,7 +139,7 @@ button {
   box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
   background: rgb(141,217,252);
    cursor: pointer;
- }
+ } */
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

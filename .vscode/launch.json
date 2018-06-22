@@ -8,7 +8,17 @@
             "type": "node",
             "request": "launch",
             "name": "啟動程式",
-            "program": "${workspaceFolder}/start"
-        }
+            // "program": "${workspaceFolder}/start"
+            
+        },
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/",
+            "webRoot": "${workspaceFolder}/src",
+            "runtimeExecutable": "/Volumes/Macintosh HD/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        },
     ]
+    
 }
