@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 class Atag extends Component {
-  constructor(props){
-    super(props)
-    // this.handleClick = this.handleClick.bind(this)
-  }
   handleClick = (e) => {
     e.preventDefault();
     this.props.drawerOnClick(this.props.href)
@@ -34,6 +30,7 @@ class Drawer extends Component {
         <div class="mdl-layout-spacer"></div>
           <Atag name="Home" href="main" drawerOnClick={this.handleClick} />
           <Atag name="Youtube" href="youtube" drawerOnClick={this.handleClick} />
+          <Atag name="Todo" href="todo" drawerOnClick={this.handleClick} />
           {/* <a className="mdl-navigation__link nounderline" href="main">Home</a>
           <a className="mdl-navigation__link nounderline" href="https://github.com/zip520123/zip520123.github.io/tree/reMaster/src">GitHub source</a>
           

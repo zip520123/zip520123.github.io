@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import YoutubeFrame from './youtubeFrame';
 import Footer from "./Footer.js"
 import Card from "./Card.js"
-
+import TodoApp from "./Todo.js"
 class Main extends Component {
     constructor(props){
         super(props)
@@ -15,14 +15,17 @@ class Main extends Component {
             {id : 2 , title : "Unknow" , src : "https://lh3.googleusercontent.com/du0qytDogXpt4G64VshflYk3LJRyzoJhREMYURiqsRPx8xucqDw1PhTDnumDJow0Jme9dUT8VlowoV_bzcZyorG5zXa9yx8OuRaMgf8jqrScuNxy37ip_aj9q_R3HFPHTOkEOYYAKA=w2400" , text : "Unknow person=3=" , href : ""}
         ]
         var cardsList = []
+       
+
         cards.map((card)=>{
             const cardTag = <Card card={card}/>
             cardsList.push(cardTag)
         })
-
-        let mainContent = <div class="mdl-grid portfolio-max-width">
-                    {cardsList}
-            </div>
+        
+        
+        let mainContent = cardsList
+        // mainContent += <p> text text </p> + mainContent
+            
         if (this.props.page == "youtube"){
             var videoIdList = ["cmlCuzn_mqI" , "z-NuxWkYtlI" ,"2yhhK_2HZzQ"]
             var videoTagList = []
@@ -30,17 +33,21 @@ class Main extends Component {
                 const videoTag = <YoutubeFrame videoId={id} />
                 videoTagList.push(videoTag)
             })
-            mainContent = <div class="mdl-grid portfolio-max-width">
-            {videoTagList}
+            mainContent = videoTagList
+            
             {/* <YoutubeFrame videoId="cmlCuzn_mqI"/>
             <YoutubeFrame videoId="z-NuxWkYtlI"/>
             <YoutubeFrame videoId="2yhhK_2HZzQ"/>  */}
-            </div>
+            
+        }
+        if (this.props.page == "todo") {
+            mainContent = <TodoApp />
         }
         return (
         <main className="mdl-layout__content">
-            {mainContent}
-
+            <div class="mdl-grid portfolio-max-width">
+                {mainContent}
+            </div>
         <Footer />
         </main>)
         

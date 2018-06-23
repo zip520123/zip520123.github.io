@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import logo from "./logo.svg";
 class Card extends Component {
     constructor(props){
         super(props)

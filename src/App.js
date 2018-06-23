@@ -3,10 +3,7 @@ import './App.css'
 import Header from './Header.js'
 import Drawer from './Drawer.js'
 import Main from './Main.js'
-import YoutubeFrame from './youtubeFrame';
-import Footer from "./Footer.js"
-import Card from "./Card.js"
-import { Nav,Navbar,NavItem ,MenuItem ,NavDropdown} from 'react-bootstrap';
+
 
 // import {LoggingButton , LoadingButton , GoogleButton} from './loginButton';
 class App extends Component {
@@ -16,7 +13,7 @@ class App extends Component {
     this.handleApp = this.handleApp.bind(this)
   }
   handleApp(herf){
-    console.log("hanldeApp: " + `${herf}`)
+    console.log("hanldeApp: " + herf)
     this.setState({ page : herf })
   }
   render() {

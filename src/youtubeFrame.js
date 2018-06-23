@@ -5,7 +5,7 @@ class YoutubeFrame extends Component {
         console.log(videoId)
         const src = `https://www.youtube.com/embed/${videoId}?loop=1&amp;playlist=${videoId}`;
         return (
-        <iframe width="560" height="315" src={src} frameBorder="0" allowFullScreen></iframe>
+        <iframe title={videoId} width="560" height="315" src={src} frameBorder="0" allowFullScreen></iframe>
         );
     }
 }
