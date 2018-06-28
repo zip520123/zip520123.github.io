@@ -14,7 +14,11 @@ class App extends Component {
   }
   handleApp(herf){
     console.log("hanldeApp: " + herf)
-    this.setState({ page : herf })
+    this.setState((prevState) => {
+      var layout = document.querySelector('.mdl-layout');
+      layout.MaterialLayout.toggleDrawer();
+      return { page : herf }
+    })
   }
   render() {
     console.log("app:" + this.state.page)
