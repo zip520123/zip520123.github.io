@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import YoutubeFrame from './youtubeFrame';
-import { Forms , FormGroup , ControlLabel ,FormControl } from 'react-bootstrap';
+import { FormGroup , ControlLabel ,FormControl } from 'react-bootstrap';
 
 class YoutubeToolsPage extends Component {
     
@@ -42,9 +42,21 @@ class YoutubeToolsPage extends Component {
             </FormGroup>
           </form>
            
-        if (this.state.value != "") {
-            let id = this.state.value
-            
+        let id = this.state.value
+        let youtubeHost = "https://www.youtube.com/watch?v="
+        
+        let i = 0
+        while (i<id.length && i< youtubeHost.length) {
+            if (youtubeHost[i] != id[i]) {
+                break
+            }
+            i+=1
+        }
+        if (i == youtubeHost.length) {
+            id = id.substring(i)
+        }
+        
+        if (id != "") {
             const videoTag = <YoutubeFrame videoId={id} />
             youtubeiFrameList.push(videoTag)
             
